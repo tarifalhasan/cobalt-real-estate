@@ -22,8 +22,11 @@ const Page3 = () => {
       {/* navbar */}
       <AfterLoginNavbar />
       <div className=" pt-36 gap-10 grid lg:grid-cols-2 ">
-        <div className=" hidden lg:block">
-          <ThubnailSlider />
+        <div className=" ">
+          <div className=" hidden  pb-10 lg:block">
+            <ThubnailSlider />
+          </div>
+          <Reviews />
         </div>
 
         {/* CHAD STYLE TRIO BUNKER BASE */}
