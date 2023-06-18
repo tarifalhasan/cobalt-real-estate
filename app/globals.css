@@ -2,26 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background: linear-gradient(180deg, #1a1b20 34.47%, #4d6587 154.91%);
+
+  height: 100%;
+  color: #ffffff;
+  font-size: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  p {
+    @apply text-base font-normal;
+  }
+  h3 {
+    @apply text-xl md:text-3xl lg:text-4xl;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.listing-preview-card {
+  background: rgba(26, 27, 32, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+}
+
+.main_content {
+  background: url(../assets/bg.png);
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.mobile_navbar {
+  transform: translateX(0px) !important;
+  transition: 0.5s all ease !important;
+}
+.absolute.inset-0.z-10.h-full.bg-white.rounded-md.shadow {
+  background: #79633a !important;
+}
+@layer components {
+  .btn-primary {
+    @apply text-white bg-rust-red border-0 py-3 px-6 focus:outline-none hover:bg-opacity-70  text-base font-bold rounded-2xl;
+  }
+  .btn-main {
+    @apply text-white bg-primary border-0 py-3 px-3 sm:px-6 focus:outline-none hover:bg-opacity-70  text-xs sm:text-base font-bold rounded-2xl;
+  }
+  .border-tabs {
+    border: 1px solid rgba(255, 255, 255, 0.31);
+  }
+  .border_card_top {
+    background: rgba(255, 255, 255, 0.33);
+  }
+  .how_to_work_card {
+    background: rgba(26, 27, 32, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 16px;
+  }
+  .review {
+    @apply w-full  text-white rounded-2xl;
+    background: rgba(26, 27, 32, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* blur 20 */
+
+    backdrop-filter: blur(10px);
+  }
+  .chad {
+    /* blur 20 */
+    @apply bg-dark-900 border rounded-2xl border-dark-70;
+
+    backdrop-filter: blur(10px);
+  }
+  .avatar-buyer {
+    @apply w-9 h-9 rounded-full;
+  }
+  .profile_card {
+    background: rgba(26, 27, 32, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+  }
 }
