@@ -61,19 +61,19 @@ const ListingPreview: React.FC<Props> = ({ key }) => {
           </li>
         </ul>
       </div>
-      <div className=" pb-6 px-5">
+      <div className=" pb-6 px-5 overflow-hidden">
         <p className=" text-base font-bold uppercase">POINTS OF INTEREST</p>
         <div className=" pt-2  flex items-center gap-1 justify-evenly">
-          <button className="btn-main !py-1.5  block  px-5 lg:px-2 2xl:px-5  text-xs font-normal uppercase">
+          <button className="btn-main !py-1.5  block  px-5 lg:px-2 2xl:px-3  text-xs font-normal uppercase">
             demo
           </button>
-          <button className="btn-main !py-1.5  px-5 lg:px-2 2xl:px-5  block text-xs font-normal uppercase">
+          <button className="btn-main !py-1.5  px-5 lg:px-2 2xl:px-3  block text-xs font-normal uppercase">
             demo
           </button>
-          <button className="btn-main !py-1.5 block px-5 lg:px-2 2xl:px-5  text-xs font-normal uppercase">
+          <button className="btn-main !py-1.5 block px-5 lg:px-2 2xl:px-3  text-xs font-normal uppercase">
             demo
           </button>
-          <button className="btn-main !py-1.5 block px-5 lg:px-2 2xl:px-5 text-xs font-normal uppercase">
+          <button className="btn-main !py-1.5 block px-5 lg:px-2 2xl:px-3 text-xs font-normal uppercase">
             RIVER
           </button>
         </div>
