@@ -92,7 +92,7 @@ const data = [
 const Reviews = () => (
   <div>
     <Tabs value="all_reviews">
-      <div className=" flex gap-4  flex-col lg:flex-row justify-between items-center">
+      <div className=" flex gap-5  flex-col lg:flex-row justify-between items-center">
         <h4 className=" text-xl italic font-bold">
           SWELLGUY34’S REVIEWS <span className=" opacity-50">(37)</span>
           <span className=" block ">
@@ -100,10 +100,10 @@ const Reviews = () => (
             <span className=" text-green">95% </span> TRUST
           </span>
         </h4>
-        <TabsHeader className="  bg-transparent  border border-tabs  p-2">
+        <TabsHeader className="  bg-transparent w-full min-w-[340px] sm:min-w-[400px]  border border-tabs  p-2">
           {data.map(({ label, value }) => (
             <Tab
-              className=" font-bold text-white py-2   !text-base"
+              className=" font-bold text-white py-2    !text-xs sm:!text-base"
               key={value}
               value={value}
             >
