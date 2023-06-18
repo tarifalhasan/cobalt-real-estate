@@ -14,53 +14,16 @@ import { DaysIcon, DeathLine, SNOW } from '@/components/svg';
 import assets from '@/assets/images/Asset1.png';
 import assets1 from '@/assets/images/Asset 3 .png';
 import Reviews from '@/components/Review/Review';
+import ThubnailSlider from '@/components/thubnailSlider';
 
 const Page3 = () => {
   return (
     <Container>
       {/* navbar */}
       <AfterLoginNavbar />
-      <div className=" pt-36 gap-10 grid sm:grid-cols-2 ">
-        <div>
-          <div className="">
-            <Image
-              src={image1}
-              alt="sdsdsds"
-              className=" sm:max-w-[780px] h-[493px] w-full rounded-2xl"
-            />
-          </div>
-          <div className=" py-7 gap-4 grid grid-cols-4">
-            <div>
-              <Image
-                className="w-full h-full max-h-[142px] rounded-2xl"
-                src={smallImage}
-                alt="small s"
-              />
-            </div>
-            <div>
-              <Image
-                className="w-full h-full max-h-[142px] rounded-2xl"
-                src={smallImage}
-                alt="small s"
-              />
-            </div>
-            <div>
-              <Image
-                className="w-full h-full max-h-[142px] rounded-2xl"
-                src={smallImage}
-                alt="small s"
-              />
-            </div>
-            <div>
-              <Image
-                className="w-full h-full max-h-[142px] rounded-2xl"
-                src={smallImage}
-                alt="small s"
-              />
-            </div>
-          </div>
-          {/* Reviews */}
-          <Reviews />
+      <div className=" pt-36 gap-10 grid lg:grid-cols-2 ">
+        <div className=" hidden lg:block">
+          <ThubnailSlider />
         </div>
 
         {/* CHAD STYLE TRIO BUNKER BASE */}

@@ -100,7 +100,7 @@ const Reviews = () => (
             <span className=" text-green">95% </span> TRUST
           </span>
         </h4>
-        <TabsHeader className="  bg-transparent  border border-tabs min-w-[380px] p-2">
+        <TabsHeader className="  bg-transparent  border border-tabs  p-2">
           {data.map(({ label, value }) => (
             <Tab
               className=" font-bold text-white py-2   !text-base"
