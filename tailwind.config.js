@@ -25,6 +25,7 @@ module.exports = withMT({
         'dark-900': 'rgba(26, 27, 32, 0.85)',
         'dark-70': 'rgba(255, 255, 255, 0.3)',
         'light-dark': 'rgba(0, 0, 0, 0.3)',
+        'gray-800': 'rgba(255, 255, 255, 0.53)',
       },
       fontSize: {
         '5xl': [

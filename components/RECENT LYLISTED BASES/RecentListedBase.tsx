@@ -9,22 +9,8 @@ import Image from 'next/image';
 import { DaysIcon, DeathLine, SNOW } from '../svg';
 import assets2 from '@/assets/images/Asset2.png';
 import ListingPreview from '../common/ListingPreview';
+import { RecentlyListingData } from '@/data';
 const RecentListedBase = () => {
-  const data = [
-    {
-      username: 'SWELLGUY34',
-    },
-    {
-      username: 'SWELLGUY34',
-    },
-    {
-      username: 'SWELLGUY34',
-    },
-    {
-      username: 'SWELLGUY34',
-    },
-  ];
-
   return (
     <Container>
       <div id="BROWSE_BASES" className=" pb-7">
@@ -33,8 +19,17 @@ const RecentListedBase = () => {
           <button className=" btn-main">VIEW MORE</button>
         </div>
         <div className="grid pt-6 lg:pt-8 gap-6 md:grid-cols-2  xl:grid-cols-4">
-          {data.map((data, key) => (
-            <ListingPreview key={key} />
+          {RecentlyListingData.map((data, key) => (
+            <ListingPreview
+              userName={data.userName}
+              image={data.featuresImage}
+              key={key}
+              trustScore={data.trustScore}
+              wipped={data.wipped}
+              bunkerBase={data.bunkerBase}
+              rusty={data.rusty}
+              tags={data.tags}
+            />
           ))}
         </div>
         <div className=" flex justify-end pt-2 pb-16">

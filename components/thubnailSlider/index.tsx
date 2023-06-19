@@ -50,7 +50,7 @@ export default function ThubnailSlider() {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
+        className="mySwiper pt-6"
       >
         <SwiperSlide>
           <Image className=" rounded-2xl" src={image} alt="SDS" />

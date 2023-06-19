@@ -36,7 +36,7 @@ const HowItWork = () => {
   ];
 
   const SellBase = () => (
-    <div className=" grid md:grid-cols-2 gap-10 lg:grid-cols-4">
+    <div className=" grid md:grid-cols-2 gap-6 xl:grid-cols-4">
       {dummyCardData.map((data, index) => (
         <div key={index} className="  space-y-3 py-4 px-5 how_to_work_card">
           <Image
@@ -80,7 +80,7 @@ const HowItWork = () => {
             <TabsHeader className="  bg-transparent  border border-tabs min-w-[320px] p-2">
               {data.map(({ label, value }) => (
                 <Tab
-                  className=" text-white font-bold  py-2   !text-base"
+                  className=" text-white font-bold  py-2.5   !text-base"
                   key={value}
                   value={value}
                 >

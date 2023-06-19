@@ -1,4 +1,5 @@
 import './globals.css';
+import './style.css';
 import { Open_Sans } from 'next/font/google';
 import Footer from '@/components/common/Footer';
 import MobileMenu from '@/components/navbar/MobileNavbar';

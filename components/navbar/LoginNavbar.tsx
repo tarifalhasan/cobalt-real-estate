@@ -11,14 +11,14 @@ const LoginNavbar = () => {
             <span className=" text-xl italic font-bold">COBALT REALTY</span>{' '}
           </Link>
         </div>
-        <nav className=" flex items-center gap-3">
+        <nav className=" flex items-center gap-7">
           <li className=" flex items-center gap-2">
             <Link className="text-base font-bold" href={'#how_to_work'}>
               HOW IT WORKS
             </Link>
           </li>
           <li className=" flex items-center gap-2">
-            <Link className="text-base font-bold" href={'/base'}>
+            <Link className="text-base font-bold" href={'/browse_base'}>
               BROWSE BASES
             </Link>
           </li>
@@ -48,7 +48,7 @@ const LoginNavbar = () => {
             </svg>
 
             <Link className="text-base font-bold" href={'/how_to_work'}>
-              HOW IT WORKS
+              LOGIN
             </Link>
           </li>
         </nav>

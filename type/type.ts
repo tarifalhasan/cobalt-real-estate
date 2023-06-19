@@ -11,3 +11,13 @@ export interface reviewsType {
   NegativeReviews: Review[];
   PositiveReviews: Review[];
 }
+
+export interface ListDataType {
+  userName: string;
+  trustScore: number;
+  bunkerBase: number;
+  wipped: string;
+  rusty: string;
+  featuresImage: StaticImageData;
+  tags: string[];
+}

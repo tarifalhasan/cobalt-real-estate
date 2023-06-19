@@ -1,5 +1,6 @@
 import React from 'react';
 import ListingPreview from '../common/ListingPreview';
+import { SimilarListData } from '@/data';
 
 const SimilarListings = () => {
   const dummyRecentListedData = [{}, {}, {}, {}];
@@ -11,8 +12,17 @@ const SimilarListings = () => {
         <button className="btn-main uppercase">view more</button>
       </div>
       <div className=" pt-7 grid md:grid-cols-2 gap-10 xl:grid-cols-4">
-        {dummyRecentListedData.map((data, key) => (
-          <ListingPreview key={key} />
+        {SimilarListData.map((data, key) => (
+          <ListingPreview
+            userName={data.userName}
+            image={data.featuresImage}
+            key={key}
+            trustScore={data.trustScore}
+            wipped={data.wipped}
+            bunkerBase={data.bunkerBase}
+            rusty={data.rusty}
+            tags={data.tags}
+          />
         ))}
       </div>
     </div>

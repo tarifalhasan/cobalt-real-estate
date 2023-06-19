@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import Container from '../Container';
 import { Dollar, NewList } from '../svg';
-import ProfileMenu from '@/app/base/ProfileMenu';
+import ProfileMenu from '@/components/navbar/ProfileMenu';
 
 const AfterLoginNavbar = () => {
   return (

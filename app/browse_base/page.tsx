@@ -16,27 +16,24 @@ import sideImage from '@/assets/images/stonedape_Real_estate_agent.png';
 import React from 'react';
 import Image from 'next/image';
 import ListingPreview from '@/components/common/ListingPreview';
+import { AllList, RecentlyListingData } from '@/data';
 
 const Listing = () => {
-  const dummyListingData = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
-
-  const dummyRecentListedData = [{}, {}, {}, {}];
-
   return (
     <section className=" ">
       <AfterLoginNavbar />
       <div className="bg-[#4D6587] ">
         {/* hero */}
         <Container>
-          <div className="hero_content  relative pt-24 w-full justify-between flex-col md:flex-row flex sm:pt-36  ">
-            <div className=" lg:basis-1/2">
+          <div className="hero_content  gap-10 relative pt-24 w-full justify-between flex-col xl:flex-row flex sm:pt-36  ">
+            <div className=" sm:basis-[70%]">
               <h4 className=" text-xl md:text-5xl italic">
                 BROWSE OUR PROPERTIES
               </h4>
               <div className="py-10">
                 <SearchBar />
               </div>
-              <div className=" pt-20">
+              <div className=" ">
                 <Filter />
               </div>
             </div>
@@ -87,8 +84,17 @@ const Listing = () => {
         </div>
         {/* Found Listing */}
         <div className=" grid md:grid-cols-2 gap-10 xl:grid-cols-4">
-          {dummyListingData.map((data, key) => (
-            <ListingPreview key={key} />
+          {AllList.map((data, key) => (
+            <ListingPreview
+              userName={data.userName}
+              image={data.featuresImage}
+              key={key}
+              trustScore={data.trustScore}
+              wipped={data.wipped}
+              bunkerBase={data.bunkerBase}
+              rusty={data.rusty}
+              tags={data.tags}
+            />
           ))}
         </div>
         {/* RECENTLY LISTED BASES */}
@@ -99,8 +105,17 @@ const Listing = () => {
           </div>
           {/* Recent Listed Data found */}
           <div className=" pt-7 grid md:grid-cols-2 gap-10 xl:grid-cols-4">
-            {dummyRecentListedData.map((data, key) => (
-              <ListingPreview key={key} />
+            {RecentlyListingData.map((data, key) => (
+              <ListingPreview
+                userName={data.userName}
+                image={data.featuresImage}
+                key={key}
+                trustScore={data.trustScore}
+                wipped={data.wipped}
+                bunkerBase={data.bunkerBase}
+                rusty={data.rusty}
+                tags={data.tags}
+              />
             ))}
           </div>
         </div>

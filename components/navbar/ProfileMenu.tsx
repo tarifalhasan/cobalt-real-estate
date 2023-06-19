@@ -16,6 +16,7 @@ import {
   LifebuoyIcon,
 } from '@heroicons/react/24/outline';
 import React from 'react';
+import Link from 'next/link';
 
 interface Props {
   image: string;
@@ -40,7 +41,7 @@ const ProfileMenu: React.FC<Props> = ({ image, name }) => {
         <MenuItem className="flex items-center gap-2">
           <UserCircleIcon strokeWidth={2} className="h-4 w-4" />
           <Typography variant="small" className="font-normal">
-            My Profile
+            <Link href={'/my_profile'}> My Profile</Link>
           </Typography>
         </MenuItem>
         <MenuItem className="flex items-center gap-2">
